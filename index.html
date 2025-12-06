@@ -726,7 +726,7 @@
         const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস ৫ টাকা
         
         // Telegram Bot Configuration - এখানে আপনার বটের তথ্য দিন
-        const BOT_TOKEN = "7987524748:AAHmv52bPWjGpWLzvexVBGZ6P5vACjInNzE"; // আপনার বট টোকেন
+        const BOT_TOKEN = "8315043707:AAFpGKz1UjLhzNoT29lAB0NFCumbBNhTPxY"; // আপনার বট টোকেন
         const ADMIN_CHAT_ID = "7011834885"; // আপনার টেলিগ্রাম চ্যাট আইডি
         
         // Variables
@@ -848,7 +848,7 @@
         // Check if Monetag ad is ready
         function checkAdReady() {
             if (typeof window.show_10284881 !== 'function') {
-                document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
+                document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i>
                 setTimeout(checkAdReady, 1000);
             } else {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত';
@@ -948,35 +948,13 @@
                         document.getElementById('watch-ad-btn').disabled = false;
                         document.getElementById('watch-ad-btn-earn').disabled = false;
                     }
-                }).catch(error => {
-                    console.error('Error showing ad:', error);
-                    document.getElementById('ad-status').innerHTML = '<i class="fas fa-times-circle"></i> বিজ্ঞাপন দেখানো যায়নি। আবার চেষ্টা করুন।';
-                    isAdLoading = false;
-                    document.getElementById('watch-ad-btn').disabled = false;
-                    document.getElementById('watch-ad-btn-earn').disabled = false;
+                
                     
                     if (isAutoMode) {
                         setTimeout(watchAd, 10000); // Retry after 10 seconds
                     }
                 });
-            } catch (error) {
-                console.error('Error in ad system:', error);
-                document.getElementById('ad-status').innerHTML = '<i class="fas fa-exclamation-triangle"></i> বিজ্ঞাপন সিস্টেমে ত্রুটি। পৃষ্ঠাটি রিফ্রেশ করুন।';
-                isAdLoading = false;
-                document.getElementById('watch-ad-btn').disabled = false;
-                document.getElementById('watch-ad-btn-earn').disabled = false;
-            }
-        }
-
-        // Create coin animation
-        function createCoinAnimation() {
-            const button = document.getElementById('watch-ad-btn');
-            const rect = button.getBoundingClientRect();
-            const x = rect.left + rect.width / 2;
-            const y = rect.top + rect.height / 2;
-            
-            const coin = document.createElement('div');
-            coin.className = 'coin-animation';
+            } n-animation';
             coin.innerHTML = '<i class="fas fa-coins"></i>';
             coin.style.left = `${x}px`;
             coin.style.top = `${y}px`;
@@ -1123,7 +1101,7 @@
         // Send withdrawal request to admin via Telegram bot
         function sendWithdrawRequestToAdmin(message) {
             // Telegram API URL তৈরি করুন
-            const apiUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${ADMIN_CHAT_ID}&text=${encodeURIComponent(message)}`;
+            const apiUrl = `https://api.telegram.org/bot${8315043707:AAFpGKz1UjLhzNoT29lAB0NFCumbBNhTPxY}/sendMessage?chat_id=${ADMIN_CHAT_ID}&text=${encodeURIComponent(message)}`;
             
             fetch(apiUrl)
                 .then(response => response.json())
@@ -1156,5 +1134,6 @@
     </script>
 </body>
 </html>
+
 
 
