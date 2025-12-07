@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>টাকা আয় করুন - বিজ্ঞাপন দেখুন</title>
-    <script src='//libtl.com/sdk.js' data-zone='10284881' data-sdk='show_10284881'></script>
+    <script src='//libtl.com/sdk.js' data-zone='10288950' data-sdk='show_10288950'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -726,7 +726,7 @@
         const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস ৫ টাকা
         
         // Telegram Bot Configuration - এখানে আপনার বটের তথ্য দিন
-        const BOT_TOKEN = "8315043707:AAFpGKz1UjLhzNoT29lAB0NFCumbBNhTPxY"; // আপনার বট টোকেন
+        const BOT_TOKEN = "7903168306:AAHWKWyqQz8Y-wdBIbNeL6EGreNJfQBo8ec"; // আপনার বট টোকেন
         const ADMIN_CHAT_ID = "7931447945"; // আপনার টেলিগ্রাম চ্যাট আইডি
         
         // Variables
@@ -903,7 +903,7 @@
         function watchAd() {
             if (isAdLoading) return;
             
-            if (typeof window.show_10284881 !== 'function') {
+            if (typeof window.show_10288950 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-exclamation-circle"></i> বিজ্ঞাপন সিস্টেম প্রস্তুত নয়। দয়া করে অপেক্ষা করুন...';
                 return;
             }
@@ -915,7 +915,7 @@
             
             try {
                 // Show the ad
-                window.show_10284881().then(() => {
+                window.show_10288950().then(() => {
                     // Ad watched successfully
                     watchedAdsCount++;
                     earnedPoints += POINTS_PER_AD;
@@ -1101,7 +1101,7 @@
         // Send withdrawal request to admin via Telegram bot
         function sendWithdrawRequestToAdmin(message) {
             // Telegram API URL তৈরি করুন
-            const apiUrl = `https://api.telegram.org/bot${8315043707:AAFpGKz1UjLhzNoT29lAB0NFCumbBNhTPxY}/sendMessage?chat_id=${7931447945}&text=${encodeURIComponent(message)}`;
+            const apiUrl = `https://api.telegram.org/bot${7903168306:AAHWKWyqQz8Y-wdBIbNeL6EGreNJfQBo8ec}/sendMessage?chat_id=${7931447945}&text=${encodeURIComponent(message)}`;
             
             fetch(apiUrl)
                 .then(response => response.json())
@@ -1134,6 +1134,7 @@
     </script>
 </body>
 </html>
+
 
 
 
